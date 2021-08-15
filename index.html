@@ -168,9 +168,21 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -207,6 +219,81 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://souldreamnight.github.io/2021/08/15/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="guojue">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/08/15/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">linux常用命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-08-15 10:33:31 / 修改时间：11:22:29" itemprop="dateCreated datePublished" datetime="2021-08-15T10:33:31+08:00">2021-08-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>ext3grep 恢复文件<br>stat +文件名 查看属性<br>last查看登录信息，文件存放在/var/log/wtmp下<br>file +文件名，查看文件类型 、+/sbin/init查看系统版本 -b去除前面的文件名<br>uname -m查看系统版本<br>lastlog查看是否登录过，/var/log/lastlog<br>tree -L显示层数 -d显示目录<br>du -h 查看磁盘大小<br>df -T 查看文件系统<br>lsof|grep del 查看被删除的文件<br>readlink查看软连接所指向的源文件<br>basename查看本身的文件名，把前面的路径去掉and截取文件名<br>dirname显示文件的路径名<br>md5sum计算和校验文件的md5值<br>top查看系统占用，类似于任务管理器<br>strace -p pid 查看进程运行过程<br>grep -w按单词搜索<br>chmod -R赋予目录及子目录权限<br>chown -R修改目录及子目录属主和属组 以.或:分隔 用户和组必须已存在（仅root可用）<br>umask修改默认权限 默认0022<br>id 查看用户uid及属组的信息<br>chattr 改变文件的扩展属性 a只能向文件追加数据 i文件加锁（仅root可用）<br>lsattr 显示文件的扩展属性<br>cat查看文件内容 -n显示行号 -b只为非空行添加行号 -E在每行末尾显示$符号 -s把多个空行合并成一个 -T区分tab键和空格<br>tac按行反向查看文件内容<br>rev按列反向查看文件内容<br>more查看长文本 -num 定义一屏显示行数，b键上翻一屏 =查看光标当前所在行行号 /接想找的内容可以查找 v进入vi编辑器 :set nu显示行号<br>less分页查看命令 支持上下左右比 more功能更强 -N显示行号<br>head显示文件开头，可同时查看多个文件 -n指定显示开头的行号 -c指定显示开头的字节数 -v显示文件名 ，-n -8除掉最后8行显示剩余的 -q不显示文件名<br>tail查看文件尾部 -f动态实时显示变化内容=tailf，-F等待查看文件生成并实时显示<br>cut切割 -b 3输出第三个字节的字符3-输出第三个字节之后的字符3,5输出第三个第五个字节的字符，不会重复输出 -c按字符分割<br>sed -n l 打印不可见字符<br>chage 设置或修改密码有效期限 -l列表 -E改有效期<br>userdel删除用户 -r删除家目录<br>env查看系统环境变量<br>su切换用户 -带环境变量切换 -c仅用切换的用户执行命令<br>sudo可以让普通用户拥有root权限去执行命令 ，sudo的配置文件/etc/sudoers -l查看拥有权限<br>visudo通过visudo编辑/etc/sudoers可以检查语法  -c检查语法 ：98为root<br>od查看二进制文件 -t指定进制<br>chpasswd为用户设置密码<br>netstat -ntpul 监听端口<br>ss -tunlp 监听端口<br>lsof -i ：22监听22端口<br>ethtool查看网卡信息<br>ip addr查看网络<br>ntpdate同步时间 ntp1.aliyun.com同步时间服务器地址<br>date 查看系统时间 -s修改时间 -d -1day查看前一天时间<br>sh -x调试脚本<br>free -m查看内存大小<br>seq按列输出内容 -w 加0 seq -f “old%02g” 10 old03<br>sync将缓存写入文件系统<br>fdisk查看磁盘信息 -c关闭dos兼容模式，-u以扇区为单位<br>bc数学计算<br>partprobe 通知内核分区表改变 后接硬盘路径<br>mkfs格式化磁盘 -t修改文件系统 -b修改block大小 -i修改inode大小<br>mkswap格式化swap分区<br>rpm -qa查看安装是否完成<br>tune2fs -c -l /dev/sdX停止检查<br>umount取消挂载  -lF强制卸载<br>mount挂载 -t接文件系统 -o选项<br>megacli 查看raid信息<br>ipmitools查看硬件信息<br>resize2fs调整文件系统大小（LVM，drbd）<br>split按照指定的行数或大小分割文件 -l指定行数 -a指定生成文件后缀长度 -d使用数字后缀 -b指定分割大小<br>paste 按列合并文件 -d指定分隔符 -s列行转换 -可指代<br>sort 排序 默认按ASCII码 -n按数值排序 -r反向排序 -u压缩不相邻行 -t指定分隔符 -k指定按第几列排序<br>uniq压缩相邻行 -c显示个数<br>wc统计文件行数 -c字节数 -w单词数 -m字符数 -l行数 -L最长行的字节数<br>dos2unix 将Windows文件改为Linux文件去除\r<br>diff比较文件差异 a增加 c改变 d删除<br>vimdiff可视化比较工具<br>type查看命令是否为内置<br>hash查看缓存命令 -r全清 -d单清<br>tty查看终端名<br>tr替换字符串 -d删除字符<br>tee多重定向 -a追加<br>ulimit 系统限制最大进程数<br>lsblk 查看挂载信息 -f 显示详细信息</p>
+<p>/var/log/messages系统日志<br>/var/log/secure安全日志<br>/var/spool/clientmqueue收到邮件临时队列<br>/proc/interrupts中断文件<br>/etc/fstab/硬盘开机自动加载<br>/etc/profile系统环境变量<br>/etc/sysctl.conf内核优化配置<br>/etc/rc.local开机自启动<br>/etc/host域名解析<br>/etc/skel用来存放新用户的配置文件<br>/etc/motd登录后显示内容<br>/etc/login.defs创建用户用户的配置信息<br>/etc/default/useradd 添加用户用户信息配置文件<br>/dev/sda1 设备硬盘 scsi sata sas sd        IDE  hd<br>/etc/fstab 开机磁盘挂载<br>/etv/bashrc查看默认创建文件权限<br>/boot/grub/grub.conf修改内核参数<br>/proc/partitions查看硬盘分区<br>ls /lib/modules/<code>uname -r</code>/kernel/fs查看系统支持的文件格式</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://souldreamnight.github.io/2021/08/14/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -232,6 +319,22 @@
       <span class="post-meta-item-text">发表于</span>
 
       <time title="创建时间：2021-08-14 14:23:35" itemprop="dateCreated datePublished" datetime="2021-08-14T14:23:35+08:00">2021-08-14</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-15 11:14:39" itemprop="dateModified" datetime="2021-08-15T11:14:39+08:00">2021-08-15</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/first/" itemprop="url" rel="index"><span itemprop="name">first</span></a>
+        </span>
     </span>
 
   
